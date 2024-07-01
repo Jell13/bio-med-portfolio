@@ -29,7 +29,7 @@ const Navbar = () => {
         }
     ]
   return (
-    <div className='h-32 w-full md:px-32 py-4'>
+    <div className='h-32 w-full md:px-32 px-12 py-4'>
         <div className='h-full w-full flex items-center justify-between'>
             <h1 className='font-bold text-4xl'>JULIA SUTEDJO</h1>
             <ul className='flex gap-8'>
