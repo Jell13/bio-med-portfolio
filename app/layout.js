@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import PageTransition from "./components/PageTransition";
+import StairTransition from "./components/StairTransition";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
           <Navbar/>
         </div>
         <div className="w-screen h-[calc(100vh-128px)] overflow-x-hidden">
+          <StairTransition/>
           <PageTransition>
             {children}
           </PageTransition>
