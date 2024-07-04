@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import PageTransition from "./components/PageTransition";
 import StairTransition from "./components/StairTransition";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
