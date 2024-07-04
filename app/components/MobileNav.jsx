@@ -1,6 +1,6 @@
 "use client"
 
-import { Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet"
+import { Sheet, SheetClose, SheetContent, SheetTrigger} from "@/components/ui/sheet"
 import { usePathname } from 'next/navigation'
 import Link from "next/link"
 import { AlignRight } from "lucide-react"
@@ -29,15 +29,22 @@ const navigation = [
 ]
 
 const MobileNav = () => {
+
+    const pathname = usePathname()
   return (
     <Sheet>
         <SheetTrigger className="flex justify-center items-center">
             <AlignRight width={30} height={30}/>
         </SheetTrigger>
         <SheetContent className="flex flex-col">
-            <div>
-               Testing 
-            </div>
+            <nav className="flex flex-col justify-center items-center gap-8 mt-32">
+                {navigation.map(nav => (
+                    <Link className="relative group text-xl" key={nav.id} href={nav.path}>
+                        {nav.name}
+                        <span className={`absolute border-b-2 left-0 bottom-[1px] border-black group-hover:w-full duration-300 ${pathname === nav.path ? "w-full" : "w-0"}`}>&nbsp;</span>
+                    </Link>
+                ))}
+            </nav>
         </SheetContent>
     </Sheet>
   )
