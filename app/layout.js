@@ -16,10 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} grainy`}>
-        <div className="h-32 w-screen">
+        <div className="h-32">
           <Navbar/>
         </div>
-        <div className="w-screen h-[calc(100vh-128px)] overflow-x-hidden">
+        <div className=" h-[calc(100vh-128px)]">
           <StairTransition/>
           <PageTransition>
             {children}

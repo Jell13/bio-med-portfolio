@@ -5,8 +5,8 @@ const page = () => {
   return (
     <div className='h-full w-full md:px-32 px-12'>
       <div className='h-full mt-20 flex gap-8'>
-        <div className=' w-[40%] h-[40%] border-gray-800 border-2 rounded-xl p-3'>
-          <Image src={"/flag.jpg"} width={350} height={350}/>
+        <div className=' border-gray-800 border-2 rounded-xl p-3'>
+          <img src={"/flag.jpg"} alt='flag'/>
         </div>
         <div className=' w-[60%] flex flex-col'>
           <h3 className='font-semibold text-xl mb-6'>About Me</h3>
