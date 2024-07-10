@@ -20,19 +20,73 @@ const page = () => {
             </div> */}
             <Carousel className="mt-20">
               <CarouselContent>
-              {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index}>
+              <CarouselItem>
                   <div className="p-1">
-                    <Link href={`/experiences/${index}`}>
+                    <Link href={`/experiences/ex1`}>
                       <Card>
                         <CardContent className="flex aspect-square items-center justify-center p-6">
-                          <span className="text-4xl font-semibold">{index + 1}</span>
+                          <div className="flex flex-col">
+                            <h1>Experience 1</h1>
+                          </div>
                         </CardContent>
                       </Card>
                     </Link>
                   </div>
                 </CarouselItem>
-              ))}
+                <CarouselItem>
+                  <div className="p-1">
+                    <Link href={`/experiences/ex1`}>
+                      <Card>
+                        <CardContent className="flex aspect-square items-center justify-center p-6">
+                          <div className="flex flex-col">
+                            <h1>Experience 1</h1>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="p-1">
+                    <Link href={`/experiences/ex1`}>
+                      <Card>
+                        <CardContent className="flex aspect-square items-center justify-center p-6">
+                          <div className="flex flex-col">
+                            <h1>Experience 1</h1>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="p-1">
+                    <Link href={`/experiences/ex1`}>
+                      <Card>
+                        <CardContent className="flex aspect-square items-center justify-center p-6">
+                          <div className="flex flex-col">
+                            <h1>Experience 1</h1>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </div>
+                </CarouselItem>
+              {/* {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <Link href={`/experiences/${index}`}>
+                      <Card>
+                        <CardContent className="flex aspect-square items-center justify-center p-6">
+                          <div className="flex flex-col">
+                            <h1>Experience {index}</h1>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </div>
+                </CarouselItem>
+              ))} */}
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
