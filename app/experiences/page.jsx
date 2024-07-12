@@ -24,7 +24,7 @@ const page = () => {
                   <div className="p-1">
                     <Link href={`/experiences/ex1`}>
                       <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <CardContent className="flex aspect-square  p-6">
                           <div className="flex flex-col">
                             <h1>Experience 1</h1>
                           </div>
