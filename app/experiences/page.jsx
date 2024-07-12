@@ -61,32 +61,18 @@ const page = () => {
                 </CarouselItem>
                 <CarouselItem>
                   <div className="p-1">
-                    <Link href={`/experiences/ex1`}>
+                    <Link href={`/experiences/ex2`}>
                       <Card>
                         <CardContent className="flex aspect-square items-center justify-center p-6">
                           <div className="flex flex-col">
-                            <h1>Experience 1</h1>
+                            <h1>Experience 2</h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatum dolores accusamus voluptate, recusandae distinctio iusto ut natus dignissimos corporis? Ad sint ipsam aut modi voluptatem, assumenda earum quidem quibusdam!</p>
                           </div>
                         </CardContent>
                       </Card>
                     </Link>
                   </div>
                 </CarouselItem>
-              {/* {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Link href={`/experiences/${index}`}>
-                      <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-6">
-                          <div className="flex flex-col">
-                            <h1>Experience {index}</h1>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  </div>
-                </CarouselItem>
-              ))} */}
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
