@@ -18,65 +18,7 @@ const page = () => {
             {/* <div className='mt-8'>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit iusto fuga veniam nostrum corrupti, deserunt expedita ratione, dicta illo consectetur reiciendis ipsum deleniti alias minus quos porro amet saepe. Sint.</p>
             </div> */}
-            <Carousel className="mt-20">
-              <CarouselContent>
-              <CarouselItem>
-                  <div className="p-1">
-                    <Link href={`/experiences/ex1`}>
-                      <Card>
-                        <CardContent className="flex aspect-square  p-6">
-                          <div className="flex flex-col">
-                            <h1>Experience 1</h1>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="p-1">
-                    <Link href={`/experiences/ex1`}>
-                      <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-6">
-                          <div className="flex flex-col">
-                            <h1>Experience 1</h1>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="p-1">
-                    <Link href={`/experiences/ex1`}>
-                      <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-6">
-                          <div className="flex flex-col">
-                            <h1>Experience 1</h1>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="p-1">
-                    <Link href={`/experiences/ex2`}>
-                      <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-6">
-                          <div className="flex flex-col">
-                            <h1>Experience 2</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatum dolores accusamus voluptate, recusandae distinctio iusto ut natus dignissimos corporis? Ad sint ipsam aut modi voluptatem, assumenda earum quidem quibusdam!</p>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  </div>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+            
         </div>
       </div>
     </div>
