@@ -4,7 +4,7 @@ import React from 'react'
 const page = () => {
   return (
     <div className='h-full w-full md:px-32 px-12'>
-      <div className='h-full mt-20 flex md:flex-row justify-center flex-col gap-8 pb-10'>
+      <div className='h-full mt-10 flex md:flex-row justify-center flex-col gap-8 pb-10'>
         {/* <div className=' border-gray-800 border-2 rounded-xl p-3'>
           <img className='border' src={"/flag.jpg"} alt='flag'/>
         </div> */}

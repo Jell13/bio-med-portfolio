@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 export default function Home() {
   return (
     <div className="h-full w-full grainy overflow-x-hidden overflow-y-auto md:px-32 px-12">
-      <div className="h-full w-full flex flex-col justify-center items-center mt-20 pb-10">
-        <h1 className="text-3xl mb-10 font-medium">BIOMEDICAL ENGINEERING</h1>
+      <div className="h-full w-full flex flex-col justify-center items-center mt-10 pb-10">
+        <h1 className="text-3xl font-medium">BIOMEDICAL ENGINEERING</h1>
         <div className="flex md:flex-row flex-col justify-center mt-10 gap-4">
           <div className="w-[50%] h-[50%]">
             <img src={"/home.png"} className="rounded-2xl"/>

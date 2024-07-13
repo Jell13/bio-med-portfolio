@@ -7,9 +7,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='w-full h-full md:px-32'>
-      <div className='w-full h-full flex flex-col justify-center'>
-        <h1 className='mt-10 text-3xl'>Projects</h1>
+    <div className='w-full h-full md:px-32 px-12'>
+      <div className='w-full h-full flex flex-col justify-center mt-10'>
+        <h1 className='text-3xl font-medium'>Projects</h1>
         <motion.div initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{
@@ -18,25 +18,25 @@ const page = () => {
             damping: 20,
             delay:2
           }} className='w-full h-full flex justify-center items-center mt-10'>
-          <Carousel className="w-[600px]">
+          <Carousel className="md:w-[600px] w-[250px]">
             <CarouselContent>
               <CarouselItem>
                 <Link href={"projects/project1"}>
-                  <div className='w-[600px] h-[300px] rounded-xl flex justify-center items-center bg-gray-300'>
+                  <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl flex justify-center items-center bg-gray-300'>
                     Project 1
                   </div>
                 </Link>
               </CarouselItem>
               <CarouselItem>
                 <Link href={"projects/project2"}>
-                  <div className='w-[600px] h-[300px] rounded-xl bg-gray-300 p-2'>
+                  <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
                     Project 2
                   </div>
                 </Link>
               </CarouselItem>
               <CarouselItem>
                 <Link href={"projects/project3"}>
-                  <div className='w-[600px] h-[300px] rounded-xl bg-gray-300 p-2'>
+                  <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
                     Project 3
                   </div>
                 </Link>
