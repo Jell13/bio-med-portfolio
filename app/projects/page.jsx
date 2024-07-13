@@ -1,4 +1,7 @@
+"use client"
+
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React from 'react'
 
@@ -7,7 +10,14 @@ const page = () => {
     <div className='w-full h-full md:px-32'>
       <div className='w-full h-full flex flex-col justify-center'>
         <h1 className='mt-10 text-3xl'>Projects</h1>
-        <div className='w-full h-full flex justify-center items-center mt-10'>
+        <motion.div initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+            delay:2
+          }} className='w-full h-full flex justify-center items-center mt-10'>
           <Carousel className="w-[600px]">
             <CarouselContent>
               <CarouselItem>
@@ -35,7 +45,7 @@ const page = () => {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-        </div>
+        </motion.div>
         
       </div>
     </div>

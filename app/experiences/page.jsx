@@ -12,7 +12,7 @@ import Link from "next/link"
 const page = () => {
   return (
     <div className='w-full h-full md:px-32 px-12'>
-      <div className='h-full flex flex-col mt-20 pb-10'>
+      <div className='h-full flex flex-col mt-10 pb-10'>
         <h1 className='text-3xl font-medium'>Experiences</h1>
         <div className='flex justify-center items-center flex-col'>
             {/* <div className='mt-8'>
