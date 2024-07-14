@@ -20,13 +20,13 @@ const Navbar = () => {
         },
         {
             id: 3,
-            path: "/experiences",
-            name: "Experiences"
+            path: "/projects",
+            name: "Projects"
         },
         {
             id: 4,
-            path: "/projects",
-            name: "Projects"
+            path: "/experiences",
+            name: "Experiences"
         }
     ]
   return (

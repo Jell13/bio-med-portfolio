@@ -22,8 +22,9 @@ const page = () => {
             <CarouselContent>
               <CarouselItem>
                 <Link href={"projects/project1"}>
-                  <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl flex justify-center items-center bg-gray-300'>
-                    Project 1
+                  <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl flex flex-col justify-center items-center bg-gray-300 p-4'>
+                    <h3 className='mb-10'>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus iste minima architecto recusandae ullam ea? Error dolor, fugiat debitis quae aperiam placeat consequuntur laboriosam perspiciatis optio laborum vel ex doloribus!</p>
                   </div>
                 </Link>
               </CarouselItem>
@@ -38,6 +39,41 @@ const page = () => {
                 <Link href={"projects/project3"}>
                   <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
                     Project 3
+                  </div>
+                </Link>
+              </CarouselItem>
+              <CarouselItem>
+                <Link href={"projects/project3"}>
+                  <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
+                    Project 4
+                  </div>
+                </Link>
+              </CarouselItem>
+              <CarouselItem>
+                <Link href={"projects/project3"}>
+                  <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
+                    Project 5
+                  </div>
+                </Link>
+              </CarouselItem>
+              <CarouselItem>
+                <Link href={"projects/project3"}>
+                  <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
+                    Project 6
+                  </div>
+                </Link>
+              </CarouselItem>
+              <CarouselItem>
+                <Link href={"projects/project3"}>
+                  <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
+                    Project 7
+                  </div>
+                </Link>
+              </CarouselItem>
+              <CarouselItem>
+                <Link href={"projects/project3"}>
+                  <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
+                    Project 8
                   </div>
                 </Link>
               </CarouselItem>
