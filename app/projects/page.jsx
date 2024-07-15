@@ -43,35 +43,35 @@ const page = () => {
                 </Link>
               </CarouselItem>
               <CarouselItem>
-                <Link href={"projects/project3"}>
+                <Link href={"projects/project4"}>
                   <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
                     Project 4
                   </div>
                 </Link>
               </CarouselItem>
               <CarouselItem>
-                <Link href={"projects/project3"}>
+                <Link href={"projects/project5"}>
                   <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
                     Project 5
                   </div>
                 </Link>
               </CarouselItem>
               <CarouselItem>
-                <Link href={"projects/project3"}>
+                <Link href={"projects/project6"}>
                   <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
                     Project 6
                   </div>
                 </Link>
               </CarouselItem>
               <CarouselItem>
-                <Link href={"projects/project3"}>
+                <Link href={"projects/project7"}>
                   <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
                     Project 7
                   </div>
                 </Link>
               </CarouselItem>
               <CarouselItem>
-                <Link href={"projects/project3"}>
+                <Link href={"projects/project8"}>
                   <div className='md:w-[600px] w-[250px] h-[300px] rounded-xl bg-gray-300 p-2'>
                     Project 8
                   </div>
