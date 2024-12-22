@@ -15,8 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} grainy`}>
-        <div className="h-32">
+      <body className={`${inter.className}`}>
+        {/* <div className="h-32">
           <Navbar/>
         </div>
         <div className=" h-[calc(100vh-128px)]">
@@ -24,7 +24,8 @@ export default function RootLayout({ children }) {
           <PageTransition>
             {children}
           </PageTransition>
-        </div>
+        </div> */}
+        {children}
       </body>
     </html>
   );
