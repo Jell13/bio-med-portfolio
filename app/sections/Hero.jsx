@@ -1,11 +1,13 @@
 import BackgroundChanger from '@/components/backgroundChanger'
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 const Hero = () => {
   return (
     <BackgroundChanger>
-      <div className=''>
-        Hello World
+      <Navbar/>
+      <div className='h-[calc(100vh-128px)]'>
+        Hello world
       </div>
     </BackgroundChanger>
   )

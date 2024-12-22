@@ -10,21 +10,16 @@ const Navbar = () => {
     const navigation = [
         {
             id: 1,
-            path: "/",
-            name: "Home"
-        },
-        {
-            id: 2,
             path: "/about",
             name: "About"
         },
         {
-            id: 3,
+            id: 2,
             path: "/experiences",
             name: "Experiences"  
         },
         {
-            id: 4,
+            id: 3,
             path: "/projects",
             name: "Projects"
         }

@@ -22,7 +22,7 @@ const BackgroundChanger = ({ children }) => {
 
   return (
     <motion.div
-      className={`min-h-screen ${colors[currentColor]} transition-colors duration-1000`}
+      className={`${colors[currentColor]} transition-colors duration-1000 ease-in-out`}
       animate={controls}
     >
       {children}
