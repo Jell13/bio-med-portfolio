@@ -1,4 +1,4 @@
-import BackgroundChanger from '@/components/backgroundChanger'
+import BackgroundChanger from '@/app/components/BackgroundChanger'
 import React from 'react'
 import Navbar from '../components/Navbar'
 
