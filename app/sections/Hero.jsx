@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <BackgroundChanger>
       <Navbar/>
-      <div className='h-[calc(100vh-128px)]'>
-        Hello world
+      <div className='h-[calc(100vh-80px)] w-screen'>
+        
       </div>
     </BackgroundChanger>
   )

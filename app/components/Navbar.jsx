@@ -25,20 +25,22 @@ const Navbar = () => {
         }
     ]
   return (
-    <div className='h-32 w-full md:px-32 px-12 py-4'>
-        <div className='h-full w-full flex items-center justify-between'>
-            <h1 className='font-bold text-4xl'>JULIA SUTEDJO</h1>
-            <div className='md:flex gap-8 hidden'>
+    <div className='h-20 w-full py-8 px-8'>
+        <div className='grid grid-cols-8 items-center'>
+            <h1 className='font-bold text-4xl col-start-1'>Julia.S</h1>
+            <div className='md:flex gap-8 hidden col-start-4'>
                 {navigation.map(nav => (
                     <Link href={nav.path} className='relative group' key={nav.id}>
-                        <h4 className={`${route === nav.path ? "font-semibold" : ""}`}>{nav.name}</h4>
-                        <span className={`border-b-2 absolute bottom-0 left-0 inline-block h-[2px] border-black group-hover:w-full duration-300 ${route === nav.path ? "w-full" : "w-0"}`}>&nbsp;</span>
+                        <h4 className={`font-semibold text-lg`}>{nav.name}</h4>
+                        <span className={`border-b-2 absolute bottom-0 left-0 inline-block h-[2px] border-black w-0 group-hover:w-full duration-300`}>&nbsp;</span>
                     </Link>
                 ))}
             </div>
-            {/* mobile nav */}
-            <div className='md:hidden'>
-                <MobileNav/>
+            <div className='col-start-8'>
+                <div className='relative group inline-block'>
+                    <button className='font-semibold text-xl'>Email me</button>
+                    <span className={`border-b-[1px] absolute bottom-0 left-0 border-black w-full group-hover:w-0 duration-300`}>&nbsp;</span>
+                </div>
             </div>
         </div>
     </div>
