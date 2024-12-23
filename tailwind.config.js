@@ -18,6 +18,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        newWhite: "#D1D1C7",
+        newBlack: "#080807",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -72,7 +74,7 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        nunito: ["Nunito Sans"],
+        nunito: ["Nunito Sans", "sans-serif"],
         biryani: ["Biryani"],
       }
     },

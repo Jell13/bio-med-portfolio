@@ -4,6 +4,7 @@ import { ReactLenis } from 'lenis/dist/lenis-react'
 import { useState } from "react";
 import Loader from "./sections/Loader";
 import Navbar from "./components/Navbar";
+import About from "./sections/About";
 
 export default function Home() {
 
@@ -20,6 +21,7 @@ export default function Home() {
       <>
         <ReactLenis root>
           <Hero/>
+          <About/>
         </ReactLenis>
       </>}
     </>

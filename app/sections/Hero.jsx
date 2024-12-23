@@ -6,9 +6,13 @@ const Hero = () => {
   return (
     <BackgroundChanger>
       <Navbar/>
-      <div className='h-[calc(100vh-80px)] w-screen'>
-        
-      </div>
+      <header className='h-[calc(100vh-80px)] py-20 px-20'>
+        <div className='w-full h-full flex justify- items-center'>
+          <div className='flex flex-col'>
+            <h1 className='text-[5rem] font-semibold leading-tight tracking-tighter'>JULIA SUTEDJO <br/>BIOMEDICAL ENGINEER</h1>
+          </div>
+        </div>
+      </header>
     </BackgroundChanger>
   )
 }

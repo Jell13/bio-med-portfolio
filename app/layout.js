@@ -19,18 +19,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" /> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" /> 
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Biryani:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Biryani:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className={`font-nunito`}>
-        {/* <div className="h-32">
-          <Navbar/>
-        </div>
-        <div className=" h-[calc(100vh-128px)]">
-          <StairTransition/>
-          <PageTransition>
-            {children}
-          </PageTransition>
-        </div> */}
         {children}
       </body>
     </html>
