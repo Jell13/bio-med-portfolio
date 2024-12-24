@@ -5,6 +5,7 @@ import { useState } from "react";
 import Loader from "./sections/Loader";
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
+import Education from "./sections/Education";
 
 export default function Home() {
 
@@ -22,6 +23,7 @@ export default function Home() {
         <ReactLenis root>
           <Hero/>
           <About/>
+          <Education/>
         </ReactLenis>
       </>}
     </>
