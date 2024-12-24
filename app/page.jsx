@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import About from "./sections/About";
 import Education from "./sections/Education";
 import Experiences from "./sections/Experiences";
+import BackgroundChanger from "./components/BackgroundChanger";
 
 export default function Home() {
 
@@ -22,7 +23,10 @@ export default function Home() {
       : 
       <>
         <ReactLenis root>
-          <Hero/>
+          <BackgroundChanger>
+            <Navbar/>
+            <Hero/>
+          </BackgroundChanger>
           <About/>
           <Education/>
           <Experiences/>

@@ -1,12 +1,7 @@
 "use client"
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import React from 'react'
-import MobileNav from './MobileNav'
+import React, { useEffect, useState } from 'react'
 
-const Navbar = () => {
-    const route = usePathname()
-    console.log(route)
+const NavbarFixed = () => {
     const navigation = [
         {
             id: 1,
@@ -45,6 +40,76 @@ const Navbar = () => {
         </div>
     </div>
   )
+}
+
+const NavbarScroll = () => {
+    const navigation = [
+        {
+            id: 1,
+            path: "#about",
+            name: "About"
+        },
+        {
+            id: 2,
+            path: "#experiences",
+            name: "Experiences"  
+        },
+        {
+            id: 3,
+            path: "#projects",
+            name: "Projects"
+        }
+    ]
+    return (
+        <div className='fixed top-0 right-0'>
+            Navbar Scrolled
+        </div>
+    )
+}
+const Navbar = () => {
+
+    const[scrolling, setScrolling] = useState(false)
+    
+      const handleScroll = () => {
+        if(window.scrollY >= window.innerHeight){
+          setScrolling(true)
+          // console.log("scroll navbar")
+        }
+        else{
+          setScrolling(false)
+          // console.log("fixed navbar")
+        }
+      }
+    
+      useEffect(() => {
+        window.addEventListener("scroll", handleScroll)
+        return () => {
+          window.removeEventListener("scroll", handleScroll)
+        }
+      },[])
+
+    const navigation = [
+        {
+            id: 1,
+            path: "#about",
+            name: "About"
+        },
+        {
+            id: 2,
+            path: "#experiences",
+            name: "Experiences"  
+        },
+        {
+            id: 3,
+            path: "#projects",
+            name: "Projects"
+        }
+    ]
+    return (
+        <nav>
+            {scrolling ? <NavbarScroll/> : <NavbarFixed/>}
+        </nav>
+    )
 }
 
 export default Navbar
