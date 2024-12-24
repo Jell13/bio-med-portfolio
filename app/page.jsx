@@ -18,7 +18,7 @@ export default function Home() {
       <AnimatePresence>
         {loading ? 
         <>
-          <div>
+          <div className="bg-[#B8DFF0]">
             <Loader setLoading={setLoading}/>
           </div>
         </> 

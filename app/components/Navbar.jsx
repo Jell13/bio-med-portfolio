@@ -21,9 +21,13 @@ const NavbarFixed = () => {
         }
     ]
   return (
-    <motion.nav className='absolute w-full py-8 px-8 font-biryani'>
+    <motion.nav 
+    initial={{y: -100}}
+    animate={{y: 0}}
+    transition={{duration: 0.5}}
+    className='absolute w-full py-8 px-8 font-biryani'>
         <div className='grid lg:grid-cols-8 grid-cols-6 items-center'>
-            <h1 className='font-semibold text-4xl col-start-1'>J.S</h1>
+            <motion.h1 className='font-semibold text-4xl col-start-1 cursor-pointer'><motion.p whileHover={{rotateX:45}}>J.S</motion.p></motion.h1>
             <div className='md:flex gap-8 flex-col md:flex-row col-start-5 lg:col-start-4 '>
                 {navigation.map(nav => (
                     <a href={nav.path} className='relative group' key={nav.id}>
