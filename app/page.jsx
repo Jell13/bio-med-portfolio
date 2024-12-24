@@ -6,6 +6,7 @@ import Loader from "./sections/Loader";
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
 import Education from "./sections/Education";
+import Experiences from "./sections/Experiences";
 
 export default function Home() {
 
@@ -24,6 +25,7 @@ export default function Home() {
           <Hero/>
           <About/>
           <Education/>
+          <Experiences/>
         </ReactLenis>
       </>}
     </>

@@ -10,9 +10,6 @@ const About = () => {
           <p className='text-xl font-biryani col-start-8 col-end-12'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque animi nobis aliquam sunt amet.</p>
         </div>
         <div className='font-biryani mt-10 flex flex-col'>
-          <div className='px-10'>
-            <hr />
-          </div>
           <div className='px-10 mt-12'>
             <p className='text-[2rem]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptatibus rerum ex porro accusamus modi dolorem, reprehenderit minus maxime? Ipsum reiciendis rerum suscipit inventore doloribus deleniti fugiat pariatur quaerat soluta.</p>
           </div>
