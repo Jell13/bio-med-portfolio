@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import { motion } from "motion/react"
 
 const NavbarFixed = () => {
     const navigation = [
@@ -20,7 +21,7 @@ const NavbarFixed = () => {
         }
     ]
   return (
-    <div className='absolute w-full py-8 px-8 font-biryani'>
+    <motion.nav className='absolute w-full py-8 px-8 font-biryani'>
         <div className='grid lg:grid-cols-8 grid-cols-6 items-center'>
             <h1 className='font-semibold text-4xl col-start-1'>J.S</h1>
             <div className='md:flex gap-8 flex-col md:flex-row col-start-5 lg:col-start-4 '>
@@ -38,7 +39,7 @@ const NavbarFixed = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </motion.nav>
   )
 }
 

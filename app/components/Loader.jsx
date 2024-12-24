@@ -1,8 +1,11 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 
 const Loader = ({setLoading}) => {
 
+    const[faded, setFaded] = useState(false);
     const container = {
         show: {
           transition: {
@@ -30,15 +33,20 @@ const Loader = ({setLoading}) => {
         },
     };
   return (
-    <motion.div className='w-full h-screen bg-[#B8DFF0] flex justify-center items-center'>
+    <motion.div className='w-full h-screen bg-[#B8DFF0] flex justify-center items-center'
+      initial={{y:0}}
+      animate={faded ? {opacity: 0} : {opacity: 1}}
+      transition={{duration: 1, ease:"easeInOut"}}
+      onAnimationComplete={() => faded && setLoading(false)}
+      >
       <motion.div
       variants={container}
       initial="hidden"
       animate="show"
       exit="exit"
-      onAnimationComplete={() => setLoading(false)}
+      onAnimationComplete={() => setFaded(true)}
       className='flex'>
-        {[0, 1, 2].map(index => ( <motion.div key={index} className='w-10 h-10 bg-[#B7B9F4] rounded-full m-2' variants={item} /> ))}
+        {[0, 1, 2].map(index => ( <motion.div key={index} className='w-10 h-10 bg-black rounded-full m-2' variants={item} /> ))}
       </motion.div>
     </motion.div>
   )
