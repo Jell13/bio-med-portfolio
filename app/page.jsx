@@ -9,6 +9,7 @@ import Works from "./sections/Works";
 import BackgroundChanger from "./components/BackgroundChanger";
 import Loader from "./components/Loader";
 import { AnimatePresence } from "framer-motion";
+import Projects from "./sections/Projects";
 
 export default function Home() {
 
@@ -32,6 +33,7 @@ export default function Home() {
             <About/>
             <Education/>
             <Works/>
+            <Projects/>
           </ReactLenis>
         </>}
       </AnimatePresence>

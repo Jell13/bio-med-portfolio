@@ -11,8 +11,8 @@ const NavbarFixed = () => {
         },
         {
             id: 2,
-            path: "#experiences",
-            name: "Experiences"  
+            path: "#works",
+            name: "Works"  
         },
         {
             id: 3,
