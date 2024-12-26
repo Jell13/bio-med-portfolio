@@ -5,7 +5,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
 import Education from "./sections/Education";
-import Experiences from "./sections/Experiences";
+import Works from "./sections/Works";
 import BackgroundChanger from "./components/BackgroundChanger";
 import Loader from "./components/Loader";
 import { AnimatePresence } from "framer-motion";
@@ -31,7 +31,7 @@ export default function Home() {
             </BackgroundChanger>
             <About/>
             <Education/>
-            <Experiences/>
+            <Works/>
           </ReactLenis>
         </>}
       </AnimatePresence>
