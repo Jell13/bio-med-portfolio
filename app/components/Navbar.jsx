@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import { motion } from "motion/react"
+import { motion, useAnimation } from "motion/react"
+import BackgroundChanger from './BackgroundChanger'
 
 const NavbarFixed = () => {
     const navigation = [
@@ -48,6 +49,8 @@ const NavbarFixed = () => {
 }
 
 const NavbarScroll = () => {
+
+    const colors = ['bg-[#B8DFF0]', 'bg-[#B7B9F4]'];
     const navigation = [
         {
             id: 1,
@@ -65,10 +68,24 @@ const NavbarScroll = () => {
             name: "Projects"
         }
     ]
+    const [currentColor, setCurrentColor] = useState(0);
+    const controls = useAnimation();
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+        setCurrentColor((prevColor) => (prevColor + 1) % colors.length);
+        }, 5000); // Change color every 5 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        controls.start({ transition: { duration: 1 } });
+    }, [currentColor, controls]);
     return (
-        <div className='fixed top-0 right-0'>
-            Navbar Scrolled
-        </div>
+        <motion.div className={`${colors[currentColor]} text-black text-xl z-40 fixed flex flex-col justify-center items-center right-7 top-7 rounded-full size-16 h-16 w-16 hover:scale-90  transition-colors duration-1000 ease-in-out`}>
+            Scroll
+        </motion.div>
     )
 }
 const Navbar = () => {
