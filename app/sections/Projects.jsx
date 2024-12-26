@@ -1,24 +1,45 @@
 import React from 'react'
+import ProjectBox from '../components/ProjectBox'
 
 const Projects = () => {
+
+  const projects = [
+    {
+      id: 2,
+      name: "Meducate Clinica Tepati"
+    },
+    {
+      id: 3,
+      name: "Engineering Dean Challenge"
+    },
+    {
+      id: 4,
+      name: "Sandia Design Comp"
+    },
+    {
+      id: 5,
+      name: "T Prep Project Elev Cart"
+    },
+    {
+      id: 6,
+      name: "Flag Alert"
+    }
+  ]
   return (
     <section id='projects' className='lg:px-20 px-8 py-20'>
       <div className='flex flex-col mt-5'>
         <h2 className='lg:text-[4rem] text-[2rem] font-semibold tracking-tighter'>MY PROJECTS /</h2>
-        <div className='lg:grid grid-cols-12 mt-20 flex flex-col'>
-          <h3 className='text-lg font-biryani col-start-6'>(Works)</h3>
-        </div>
+        <div className='mt-8 h-[2px] bg-black mb-8'/>
         <div className='grid grid-cols-12'>
-        <div className='col-span-12 rounded-xl border-[2px] py-10 px-20 border-red-400'>
-          <h3>Experience 1</h3>
+          <div className='col-span-12 flex flex-col py-48 border-[2px] border-red-400 px-5 rounded-xl'>
+            <h3 className='font-biryani'>BMES Makeathon</h3>
+          </div>
+          <div className='grid grid-cols-12 col-span-12 gap-10 mt-10'>
+            {projects.map(({id, name}) => (
+              <ProjectBox id={id} name={name}/>
+            ))}
+          </div>
         </div>
-        <div className='col-span-6 col-start-1 col-end-6'>
-          <h3>Experience 2</h3>
-        </div>
-        <div className='col-span-6 col-start-7 col-end-12'>
-          <h3>Experience 2</h3>
-        </div> 
-      </div>
       </div>            
     </section>
   )
