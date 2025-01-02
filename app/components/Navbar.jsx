@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import { motion, useAnimation } from "motion/react"
+import { easeIn, motion, useAnimation } from "motion/react"
 import BackgroundChanger from './BackgroundChanger'
 
 const NavbarFixed = () => {
@@ -50,6 +50,7 @@ const NavbarFixed = () => {
 
 const NavbarScroll = () => {
 
+    const [active, setActive] = useState();
     const colors = ['bg-[#B8DFF0]', 'bg-[#B7B9F4]'];
     const navigation = [
         {
@@ -83,9 +84,19 @@ const NavbarScroll = () => {
         controls.start({ transition: { duration: 1 } });
     }, [currentColor, controls]);
     return (
-        <motion.div className={`${colors[currentColor]} text-black text-xl z-40 fixed flex flex-col justify-center items-center right-7 top-7 rounded-full size-16 h-16 w-16 hover:scale-90  transition-colors duration-1000 ease-in-out`}>
-            Scroll
-        </motion.div>
+        <motion.button 
+        initial={{scale: 0}}
+        animate={{scale: 1}}
+        whileHover={{
+            scale: 0.8,
+            transition: {duration: 0.3}
+        }}
+        exit={{scale: 0}}
+        onClick={() => setActive(!active)}
+        className={`${colors[currentColor]} text-newBlack text-xl z-40 fixed flex flex-col justify-center items-center right-7 top-7 rounded-full size-16 h-16 w-16 hover:scale-90  transition-colors duration-1000 ease-in-out`}>
+            <span className={`w-7 h-[2px] bg-newBlack absolute rounded-full ${active ? "translate-y-0 rotate-45": "-translate-y-1 rotate-0"} duration-300`}></span>
+            <span className={`w-7 h-[2px] bg-newBlack absolute rounded-full ${active ? "translate-y-0 -rotate-45": "translate-y-1 rotate-0"} duration-300`}></span>
+        </motion.button>
     )
 }
 const Navbar = () => {

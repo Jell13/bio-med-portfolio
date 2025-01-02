@@ -34,7 +34,7 @@ const Projects = () => {
           <div className='col-span-12 flex flex-col py-48 border-[2px] border-red-400 px-5 rounded-xl'>
             <h3 className='font-biryani'>BMES Makeathon</h3>
           </div>
-          <div className='grid grid-cols-12 col-span-12 gap-10 mt-10'>
+          <div className='lg:grid grid-cols-12 col-span-12 gap-10 mt-10 flex flex-col'>
             {projects.map(({id, name}) => (
               <ProjectBox id={id} name={name}/>
             ))}
