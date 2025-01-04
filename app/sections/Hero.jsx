@@ -5,10 +5,9 @@ import { motion, useInView, useScroll } from 'motion/react'
 
 const Hero = () => {
 
-    const aboutRef = useRef()
+    const heroRef = useRef()
 
-
-    const isInView = useInView(aboutRef, {margin: "-100px"})
+    const isInView = useInView(heroRef, {margin: "-100px"})
 
     const wordVariants = {
       hidden: {y: 50, opacity: 0},
@@ -28,7 +27,7 @@ const Hero = () => {
       <div className='w-full h-full flex justify- items-center'>
         <div className='flex flex-col gap-6'>
           <motion.h1 
-          ref={aboutRef} 
+          ref={heroRef} 
           variants={staggerChildren} 
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
