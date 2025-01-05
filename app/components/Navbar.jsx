@@ -158,41 +158,24 @@ const Navbar = () => {
 
     const[scrolling, setScrolling] = useState(false)
     
-      const handleScroll = () => {
-        if(window.scrollY >= window.innerHeight){
-          setScrolling(true)
-          // console.log("scroll navbar")
-        }
-        else{
-          setScrolling(false)
-          // console.log("fixed navbar")
-        }
-      }
-    
-      useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
-        return () => {
-          window.removeEventListener("scroll", handleScroll)
-        }
-      },[])
+    const handleScroll = () => {
+    if(window.scrollY >= window.innerHeight){
+        setScrolling(true)
+        // console.log("scroll navbar")
+    }
+    else{
+        setScrolling(false)
+        // console.log("fixed navbar")
+    }
+    }
 
-    const navigation = [
-        {
-            id: 1,
-            path: "#about",
-            name: "About"
-        },
-        {
-            id: 2,
-            path: "#experiences",
-            name: "Experiences"  
-        },
-        {
-            id: 3,
-            path: "#projects",
-            name: "Projects"
-        }
-    ]
+    useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+        window.removeEventListener("scroll", handleScroll)
+    }
+    },[])
+
     return (
         <nav>
             {scrolling ? <NavbarScroll/> : <NavbarFixed/>}
