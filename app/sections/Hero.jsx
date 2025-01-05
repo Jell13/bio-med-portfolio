@@ -23,6 +23,7 @@ const Hero = () => {
     }
   return (
     <motion.header 
+    id='home'
     className='h-screen py-20 lg:px-20 px-8'>
       <div className='w-full h-full flex justify- items-center'>
         <div className='flex flex-col gap-6'>
