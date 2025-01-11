@@ -7,17 +7,17 @@ const Works = () => {
     {
       id: 1,
       name: "Noblemind",
-      category: ["Health", "Technology"]
+      category: "Health | Technology"
     },
     {
       id: 2,
       name: "Yamada Lab",
-      category: ["Celular Biology"]
+      category: "Celullar Biology"
     },
     {
       id: 3,
       name: "Tian Lab",
-      category: ["Celular Biology"]
+      category: "Celullar Biology"
     }
   ]
 
@@ -55,10 +55,17 @@ const Works = () => {
             </motion.p>
           ))}
         </motion.h2>
-        <div>
+        <h3 className='mb-10 lg:text-[3rem] text-[1rem] mt-5'>A selection of my work.</h3>
+        <div className='lg:grid grid-cols-12 gap-12 flex flex-col'>
           {works.map(({id, name, category}) => (
-            <div key={id}>
-              {name}
+            <div key={id} className='col-span-12 py-20 border-[1px] border-red-300 flex flex-col gap-4'>
+              <div className='flex justify-center items-center'>
+                <img className='' src="./home.png" alt="" />
+              </div>
+              <div className='flex flex-col px-8'>
+                <h4 className='text-gray-600 lg:text-2xl text-lg'>{category}</h4>
+                <h3 className='lg:text-[2.5rem] text-[1.5rem]'>{name}</h3>
+              </div>
             </div>
           ))}
         </div>
