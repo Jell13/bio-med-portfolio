@@ -58,13 +58,6 @@ const About = () => {
               </div>
             </div>
           </div>
-          {/* <h3 className='text-lg font-biryani lg:col-start-6 col-start-1'>(About)</h3>
-          <p className='text-xl font-biryani lg:col-start-8 col-end-12'>You're quote goes here</p>
-        </div>
-        <div className='font-biryani mt-10 flex flex-col'>
-          <div className='mt-12'>
-            <p className='text-[1.2rem] lg:text-[2rem]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptatibus rerum ex porro accusamus modi dolorem, reprehenderit minus maxime? Ipsum reiciendis rerum suscipit inventore doloribus deleniti fugiat pariatur quaerat soluta.</p>
-          </div> */}
         </div>
       </div>
     </section>
