@@ -3,6 +3,24 @@ import React, { useRef } from 'react'
 
 const Works = () => {
 
+  const works = [
+    {
+      id: 1,
+      name: "Noblemind",
+      category: ["Health", "Technology"]
+    },
+    {
+      id: 2,
+      name: "Yamada Lab",
+      category: ["Celular Biology"]
+    },
+    {
+      id: 3,
+      name: "Tian Lab",
+      category: ["Celular Biology"]
+    }
+  ]
+
   const workRef = useRef()
 
   const isInView = useInView(workRef, {margin: "-100px"})
@@ -28,7 +46,7 @@ const Works = () => {
         variants={staggerChildren}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className='lg:text-[4rem] text-[2rem] font-semibold tracking-tighter flex gap-4'>
+        className='lg:text-[4rem] text-[2rem] font-semibold tracking-tighter flex lg:flex-row flex-col lg:gap-4'>
           {["PROFESSIONAL", "HISTORY"].map((w, i) => (
             <motion.p 
             variants={wordVariants}
@@ -37,6 +55,13 @@ const Works = () => {
             </motion.p>
           ))}
         </motion.h2>
+        <div>
+          {works.map(({id, name, category}) => (
+            <div key={id}>
+              {name}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

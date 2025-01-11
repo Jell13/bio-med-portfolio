@@ -36,7 +36,7 @@ const Projects = () => {
           </div>
           <div className='lg:grid grid-cols-12 col-span-12 gap-10 mt-10 flex flex-col'>
             {projects.map(({id, name}) => (
-              <ProjectBox id={id} name={name}/>
+              <ProjectBox key={id} id={id} name={name}/>
             ))}
           </div>
         </div>
