@@ -1,5 +1,6 @@
 import { motion, useInView } from 'motion/react'
 import React, { useRef } from 'react'
+import WorkBox from '../components/WorkBox'
 
 const Works = () => {
 
@@ -58,15 +59,7 @@ const Works = () => {
         <h3 className='mb-10 lg:text-[3rem] text-[1rem] mt-5'>A selection of my work.</h3>
         <div className='lg:grid grid-cols-12 gap-12 flex flex-col'>
           {works.map(({id, name, category}) => (
-            <div key={id} className='col-span-12 py-20 border-[1px] border-red-300 flex flex-col gap-4'>
-              <div className='flex justify-center items-center'>
-                <img className='' src="./home.png" alt="" />
-              </div>
-              <div className='flex flex-col px-8'>
-                <h4 className='text-gray-600 lg:text-2xl text-lg'>{category}</h4>
-                <h3 className='lg:text-[2.5rem] text-[1.5rem]'>{name}</h3>
-              </div>
-            </div>
+            <WorkBox id={id} name={name} category={category}/>
           ))}
         </div>
       </div>
