@@ -8,17 +8,20 @@ const Works = () => {
     {
       id: 1,
       name: "Noblemind",
-      category: "Health | Technology"
+      category: "Health | Technology",
+      path: "/noblemind"
     },
     {
       id: 2,
       name: "Yamada Lab",
-      category: "Celullar Biology"
+      category: "Celullar Biology",
+      path: "/yamadalab"
     },
     {
       id: 3,
       name: "Tian Lab",
-      category: "Celullar Biology"
+      category: "Celullar Biology",
+      path: "/tianlab"
     }
   ]
 
@@ -58,8 +61,8 @@ const Works = () => {
         </motion.h2>
         <h3 className='mb-10 lg:text-[3rem] text-[1rem] mt-5'>A selection of my work.</h3>
         <div className='lg:grid grid-cols-12 gap-12 flex flex-col'>
-          {works.map(({id, name, category}) => (
-            <WorkBox id={id} name={name} category={category}/>
+          {works.map(({id, name, category, path}) => (
+            <WorkBox id={id} name={name} category={category} path={path}/>
           ))}
         </div>
       </div>

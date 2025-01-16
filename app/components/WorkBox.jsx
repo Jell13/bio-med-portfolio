@@ -1,9 +1,10 @@
 'use client'
 
 import { useMotionValue, motion } from 'framer-motion'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
-const WorkBox = ({id, category, name}) => {
+const WorkBox = ({id, category, name, path}) => {
     
     const[hovered, setHovered] = useState(false)
 
@@ -33,12 +34,15 @@ const WorkBox = ({id, category, name}) => {
             View
         </motion.div>
         <div key={id} className='py-20 bg-slate-100 rounded-3xl flex flex-col gap-4'>
-            <motion.a 
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+            <a 
             className='flex justify-center items-center'>
-                <img className='' src="./home.png" alt="" />
-            </motion.a>
+                <Link href={path}>
+                    <motion.img  
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}
+                    className='' src="./home.png" alt="" />
+                </Link>
+            </a>
             <div className='flex flex-col px-8'>
                 <h4 className='text-gray-600 lg:text-2xl text-lg'>{category}</h4>
                 <h3 className='lg:text-[2.5rem] text-[1.5rem]'>{name}</h3>
