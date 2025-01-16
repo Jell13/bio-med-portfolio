@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 
 const WorkBox = ({id, category, name}) => {
     
-    const[hovered, setHovered] = useState()
+    const[hovered, setHovered] = useState(false)
 
     const mousePosition = {
         x: useMotionValue(0),
@@ -25,7 +25,7 @@ const WorkBox = ({id, category, name}) => {
   return (
     <div className='col-span-12'>
         <motion.div
-        className="absolute left-6 top-4 bg-gray-800 text-white p-2 rounded-xl pointer-events-none"
+        className="absolute left-6 top-4 bg-gray-800 text-white p-2 rounded-xl pointer-events-none z-50"
         style={{x: mousePosition.x, y: mousePosition.y}}
         initial={false}
         animate={{scale: hovered ? 1 : 0}}
