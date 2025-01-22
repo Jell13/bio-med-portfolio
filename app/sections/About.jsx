@@ -27,7 +27,7 @@ const About = () => {
     <section id='about' className='lg:px-20 px-8 py-20'>
       <div className='flex flex-col justify-center mt-5'>
         <div className='grid grid-cols-12'>
-          <LuArrowDownRight size={100}/>
+          <LuArrowDownRight className='hidden lg:flex' size={100}/>
           <motion.h2 
           ref={aboutRef} 
           variants={staggerChildren}
