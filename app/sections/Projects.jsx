@@ -12,40 +12,40 @@ const Projects = () => {
   const projects = [
     {
       id: "01",
-      title: "Biocompatible Scaffold Development",
-      category: "Tissue Engineering",
-      description: "Designed and tested novel 3D-printed scaffolds for tissue regeneration using biodegradable polymers, achieving 85% cell viability in vitro studies.",
-      tags: ["3D Printing", "Biomaterials", "In Vitro Testing"],
-      image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=600&fit=crop",
-      link: "/projects/scaffold-development" // Replace with your actual project page URL
-    },
-    {
-      id: "02",
-      title: "Wearable Health Monitoring System",
-      category: "Medical Devices",
-      description: "Developed a non-invasive wearable sensor for continuous monitoring of vital signs, with integrated data analytics for early detection of health anomalies.",
-      tags: ["IoT", "Sensors", "Data Analytics"],
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
-      link: "/projects/wearable-monitoring" // Replace with your actual project page URL
-    },
-    {
-      id: "03",
-      title: "Drug Delivery Microdevice",
+      title: "Magnetic Actuator for Pressure regulation",
       category: "Research & Development",
-      description: "Engineered a microfluidic device for targeted drug delivery, improving therapeutic efficacy while minimizing side effects through controlled release mechanisms.",
-      tags: ["Microfluidics", "Drug Delivery", "Prototyping"],
-      image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=600&fit=crop",
-      link: "/projects/drug-delivery" // Replace with your actual project page URL
+      description: "Engineered a precision-aligned magnetic actuator system using iterative 3D-printed designs and a custom ball-joint mechanism, improving magnetic field centering for more reliable droplet manipulation experiments.",
+      tags: ["Biomechanics", "Prototyping", "Mechanical Design", "Research Instrumentation"],
+      image: "/actuator.gif",
+      link: "/projects/actuator"
     },
-    {
-      id: "04",
-      title: "Biomechanical Analysis Platform",
-      category: "Data Analysis",
-      description: "Created a comprehensive analysis platform for studying human movement patterns, assisting in rehabilitation protocol development and injury prevention.",
-      tags: ["Biomechanics", "Motion Capture", "Machine Learning"],
-      image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=600&fit=crop",
-      link: "/projects/biomechanical-analysis" // Replace with your actual project page URL
-    }
+    // {
+    //   id: "02",
+    //   title: "Wearable Health Monitoring System",
+    //   category: "Medical Devices",
+    //   description: "Developed a non-invasive wearable sensor for continuous monitoring of vital signs, with integrated data analytics for early detection of health anomalies.",
+    //   tags: ["IoT", "Sensors", "Data Analytics"],
+    //   image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+    //   link: "/projects/wearable-monitoring" // Replace with your actual project page URL
+    // },
+    // {
+    //   id: "03",
+    //   title: "Drug Delivery Microdevice",
+    //   category: "Research & Development",
+    //   description: "Engineered a microfluidic device for targeted drug delivery, improving therapeutic efficacy while minimizing side effects through controlled release mechanisms.",
+    //   tags: ["Microfluidics", "Drug Delivery", "Prototyping"],
+    //   image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=600&fit=crop",
+    //   link: "/projects/drug-delivery" // Replace with your actual project page URL
+    // },
+    // {
+    //   id: "04",
+    //   title: "Biomechanical Analysis Platform",
+    //   category: "Data Analysis",
+    //   description: "Created a comprehensive analysis platform for studying human movement patterns, assisting in rehabilitation protocol development and injury prevention.",
+    //   tags: ["Biomechanics", "Motion Capture", "Machine Learning"],
+    //   image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=600&fit=crop",
+    //   link: "/projects/biomechanical-analysis" // Replace with your actual project page URL
+    // }
   ];
 
   return (
@@ -76,14 +76,14 @@ const Projects = () => {
               <h3 className="text-5xl lg:text-6xl font-bold font-albert text-[#214970] leading-tight">
                 Featured<br />Projects
               </h3>
-              <motion.div 
+              {/* <motion.div 
                 className="hidden lg:block text-sm text-gray-500 font-light"
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ delay: 0.5 }}
               >
                 {projects.length} Projects
-              </motion.div>
+              </motion.div> */}
             </div>
           </div>
 
