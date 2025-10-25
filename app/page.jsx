@@ -1,43 +1,37 @@
-"use client"
+"use client";
 import Hero from "./sections/Hero";
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis, useLenis } from "lenis/react";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
-import Education from "./sections/Education";
-import Works from "./sections/Works";
-import BackgroundChanger from "./components/BackgroundChanger";
 import Loader from "./components/Loader";
-import { AnimatePresence } from "framer-motion";
 import Projects from "./sections/Projects";
-
+import { motion, AnimatePresence } from "framer-motion";
+import Footer from "./sections/Footer";
 
 export default function Home() {
+    const [loading, setLoading] = useState(true);
 
-  const[loading, setLoading] = useState(true)
-  return (
-    <>
-      <AnimatePresence>
-        {loading ? 
-        <>
-          <div className="bg-[#B8DFF0]">
-            <Loader setLoading={setLoading}/>
-          </div>
-        </> 
-        : 
-        <>
-          <ReactLenis root>
-            <BackgroundChanger>
-              <Navbar/>
-              <Hero/>
-            </BackgroundChanger>
-            <About/>
-            <Education/>
-            <Works/>
-            <Projects/>
-          </ReactLenis>
-        </>}
-      </AnimatePresence>
-    </>
-  );
+    return (
+        <AnimatePresence mode="wait">
+            {loading ? (
+                <Loader setLoading={setLoading} />
+            ) : (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <ReactLenis root>
+                        <Navbar />
+                        <Hero />
+                        <About />
+                        <Projects />
+                        {/* <Contact /> */}
+                        <Footer />
+                    </ReactLenis>
+                </motion.div>
+            )}
+        </AnimatePresence>
+    );
 }

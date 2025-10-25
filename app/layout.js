@@ -1,9 +1,20 @@
-import { Inter, Nunito_Sans } from "next/font/google";
+import { Albert_Sans, DM_Sans } from 'next/font/google'
 import "./globals.css";
 
 
-const inter = Inter({ subsets: ["latin"] });
-const nunito = Nunito_Sans({ subsets: ["latin"] });
+const albert = Albert_Sans({
+  subsets: ['latin'],         // choose correct subsets
+  weight: ['400','700'],      // choose which weights you need
+  display: 'swap',
+  variable: '--font-albert'
+})
+
+const dm = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400','500','700'],
+  display: 'swap',
+  variable: '--font-dm'
+})
 
 export const metadata = {
   title: "Julia Sutedjo Portfolio",
@@ -18,7 +29,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" /> 
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Biryani:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={`font-nunito`}>
+      <body className={`${albert.variable} ${dm.variable}`}>
         {children}
       </body>
     </html>

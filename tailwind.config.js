@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily } = require('tailwindcss/defaultTheme')
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -75,8 +77,8 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        nunito: ["Nunito Sans", "sans-serif"],
-        biryani: ["Biryani"],
+        albert: ['var(--font-albert)', ...fontFamily.sans],
+        dmsans: ['var(--font-dm)', ...fontFamily.sans],
       }
     },
   },
