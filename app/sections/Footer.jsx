@@ -7,7 +7,7 @@ const Footer = () => {
         <p>© 2025 Julia Sutedjo. All rights reserved.</p>
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-[#E8A87C] rounded-full animate-pulse" />
-          <p>Bio Engineer</p>
+          <p>Bioengineer</p>
         </div>
       </div>
     </footer>

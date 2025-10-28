@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react'
 import { LuArrowDownRight } from "react-icons/lu"
 import { motion, useInView } from 'motion/react'
+import Image from 'next/image';
 
 // const About = () => {
 
@@ -89,14 +90,24 @@ const About = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 font-dmsans">
-            <div>
+            <div className='flex justify-center items-center'>
+              <div className='relative w-full h-[300px] md:h-[500px] rounded-2xl overflow-hidden'>
+                <Image 
+                  src="/Julia-hero.webp" 
+                  alt="Julia Sutedjo - Bioengineering professional" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                  className='object-cover rounded-2xl'
+                  priority
+                />
+              </div>
+            </div>
+            <div className="space-y-6">
               <h3 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight font-albert text-[#214970]">
                 Engineering solutions for better healthcare
               </h3>
-            </div>
-            <div className="space-y-6">
               <p className="text-gray-700 leading-relaxed">
-                As a biomedical engineer, I specialize in developing innovative solutions that bridge the gap between engineering principles and medical applications. My work focuses on creating technologies that improve patient outcomes and advance healthcare delivery.
+                As a bioengineer, I specialize in developing innovative solutions that bridge the gap between engineering principles and medical applications. My work focuses on creating technologies that improve patient outcomes and advance healthcare delivery.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 With expertise in biomaterials, medical device design, and tissue engineering, I'm passionate about translating research into practical applications that make a real-world impact.

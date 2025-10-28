@@ -294,7 +294,7 @@ const Hero = () => {
               className="w-2 h-2 bg-[#E8A87C] rounded-full"
             />
             <p className="text-sm tracking-widest text-[#E8A87C] font-albert uppercase font-semibold">
-              Bio Engineer
+              Bioengineer
             </p>
             <div className="h-[1px] w-12 bg-[#E8A87C]/50" />
           </motion.div>
